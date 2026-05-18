@@ -1,0 +1,66 @@
+<mxfile host="app.diagrams.net" version="24.7.17">
+  <diagram id="paper-arch" name="Page-1">
+    <mxGraphModel dx="1200" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="user" value="👤 디지털 취약계층" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#c62828;strokeWidth=2;fontSize=13;fontStyle=1;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="40" y="270" width="150" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="frontGroup" value="🖥️ Presentation Layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=13;fontColor=#01579b;spacingTop=5;" vertex="1" parent="1">
+          <mxGeometry x="240" y="40" width="230" height="540" as="geometry" />
+        </mxCell>
+        <mxCell id="react" value="React 19 · TypeScript" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#01579b;strokeWidth=1.5;fontSize=12;fontStyle=1;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="270" y="90" width="170" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="shadcn" value="shadcn/ui · Radix UI&#xa;WCAG 2.1 AA-AAA 접근성" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#01579b;strokeWidth=1.5;fontSize=11;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="270" y="160" width="170" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="tailwind" value="Tailwind CSS v4&#xa;시니어 친화 UI · 고대비" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#01579b;strokeWidth=1.5;fontSize=11;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="270" y="240" width="170" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="geo" value="Browser Geolocation API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#01579b;strokeWidth=1.5;fontSize=11;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="270" y="320" width="170" height="45" as="geometry" />
+        </mxCell>
+
+        <mxCell id="backGroup" value="⚙️ Service Layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#2e7d32;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=13;fontColor=#2e7d32;spacingTop=5;" vertex="1" parent="1">
+          <mxGeometry x="530" y="100" width="230" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="bun" value="Bun.serve() HTTP Server" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2e7d32;strokeWidth=1.5;fontSize=12;fontStyle=1;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="560" y="150" width="170" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="search" value="검색 엔진&#xa;Haversine 거리계산 · 초성검색" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2e7d32;strokeWidth=1.5;fontSize=11;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="560" y="235" width="170" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="filter" value="다중 필터&#xa;대상 · 유형 · 비용 · 접근성" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2e7d32;strokeWidth=1.5;fontSize=11;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="560" y="320" width="170" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="dataGroup" value="💾 Data Layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;strokeWidth=2;verticalAlign=top;fontStyle=1;fontSize=13;fontColor=#e65100;spacingTop=5;" vertex="1" parent="1">
+          <mxGeometry x="820" y="150" width="230" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="mongo" value="MongoDB" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e65100;strokeWidth=2;fontSize=14;fontStyle=1;fontColor=#333333;size=12;" vertex="1" parent="1">
+          <mxGeometry x="870" y="200" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="schema" value="기관명 · 위치&#xa;수혜대상 · 프로그램&#xa;비용 · 일정" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e65100;strokeWidth=1.5;fontSize=11;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="860" y="305" width="150" height="65" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" value="상호작용" style="endArrow=block;html=1;rounded=1;strokeWidth=2;strokeColor=#333333;fontSize=10;fontStyle=1;" edge="1" parent="1" source="user" target="react">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="REST API · JSON" style="endArrow=block;startArrow=block;html=1;rounded=1;strokeWidth=2.5;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="react" target="bun">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="Query" style="endArrow=block;startArrow=block;html=1;rounded=1;strokeWidth=2.5;strokeColor=#333333;fontSize=10;" edge="1" parent="1" source="bun" target="mongo">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="위도/경도" style="endArrow=block;html=1;rounded=1;strokeWidth=1.5;strokeColor=#666666;dashed=1;fontSize=10;" edge="1" parent="1" source="geo" target="search">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

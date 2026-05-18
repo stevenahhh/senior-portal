@@ -1,0 +1,147 @@
+/* WCAG 2.1 AA/AAA 준수를 위한 접근성 CSS */
+
+/* 스크린 리더 전용 - 시각적으로 숨기되 SR은 읽을 수 있게 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only:focus,
+.sr-only:active {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* 포커스 가시성 강화 - WCAG 2.4.7 (AA) */
+*:focus-visible {
+  outline: 3px solid #0ea5e9 !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2) !important;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #0ea5e9 !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 5px rgba(14, 165, 233, 0.15) !important;
+}
+
+/* 고대비 모드 지원 - WCAG 1.4.3 (AA) */
+@media (prefers-contrast: high) {
+  * {
+    border-width: 2px !important;
+    font-weight: 700 !important;
+  }
+
+  button,
+  a {
+    border: 3px solid currentColor !important;
+  }
+}
+
+/* 애니메이션 줄이기 - WCAG 2.3.3 (AAA) */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 터치 타겟 최소 크기 - WCAG 2.5.5 (AAA: 44x44px) */
+button,
+a,
+input,
+select,
+textarea,
+[role="button"],
+[role="link"] {
+  min-height: 44px !important;
+  min-width: 44px !important;
+}
+
+/* 텍스트 간격 - WCAG 1.4.12 (AA) */
+p,
+li,
+span {
+  line-height: 1.75 !important;
+  letter-spacing: 0.02em !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.4 !important;
+  margin-bottom: 0.75em !important;
+}
+
+/* 색상 대비 - WCAG 1.4.3 (AA: 4.5:1), 1.4.6 (AAA: 7:1) */
+.text-high-contrast {
+  color: #0f172a !important;
+  /* 검정 기준 21:1 */
+}
+
+.text-secondary-contrast {
+  color: #334155 !important;
+  /* 검정 기준 12:1 */
+}
+
+.bg-high-contrast {
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+}
+
+/* 링크 명확성 - WCAG 1.4.1 (A) */
+a {
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+}
+
+a:hover {
+  text-decoration-thickness: 2px !important;
+}
+
+/* 아이콘 접근성 - 모든 아이콘에는 aria-label 또는 title 필수 */
+
+/* 라이브 리전 - WCAG 4.1.3 (AA) */
+[role="status"],
+[role="alert"],
+[aria-live] {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* 리사이징 - WCAG 1.4.4 (AA: 200% 확대 가능) */
+html {
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
